@@ -14,12 +14,23 @@ public class ControllerFlappy : Controller
     {
         Vector2 vel = body.velocity;
 
-        if (Mathf.Abs(PressedState.hor) > 0) vel = new Vector2(hspeed * PressedState.hor, vel.y);
-        else vel = new Vector2(vel.x * inertia, vel.y);
+        if (Mathf.Abs(PressedState.hor) > 0)
+        {
+            vel = new Vector2(hspeed * PressedState.hor, vel.y);
+        }
+        else
+        {
+            vel = new Vector2(vel.x * inertia, vel.y);
+        }
 
-        if (Mathf.Abs(PressedState.ver) > 0) vel = new Vector2(vel.x, vspeed);
-        // else vel += new Vector2(0, -gravity);
-        else vel = new Vector2(vel.x, -gravity);
+        if (Mathf.Abs(PressedState.ver) > 0)
+        {
+            vel = new Vector2(vel.x, vspeed);
+        }
+        else
+        {
+            vel = new Vector2(vel.x, -gravity);
+        }
 
         body.velocity = vel;
     }
