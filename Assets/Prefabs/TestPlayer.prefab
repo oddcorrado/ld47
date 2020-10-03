@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 1815057826609881643}
   - component: {fileID: 1815057826609881642}
   - component: {fileID: 1815057826609881641}
-  - component: {fileID: 1815057826609881645}
+  - component: {fileID: 5506624902925478189}
+  - component: {fileID: 7052828553425388758}
   m_Layer: 0
   m_Name: TestPlayer
   m_TagString: Untagged
@@ -49,6 +50,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -132,7 +134,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1815057826609881645
+--- !u!114 &5506624902925478189
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,11 +143,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1815057826609881640}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa360b50ae08746fa8d63b9bcd301f89, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f038279f1733490899ed03c2869aa0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 1815057826609881641}
-  hspeed: 7
-  vspeed: 7
-  inertia: 0.9
-  gravity: 1
+  hspeed: 10
+  vspeed: 10
+  inertia: 0.8
+  gravity: 10
+--- !u!114 &7052828553425388758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815057826609881640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b606ab2a1e75b4f9a9aceeb53675a1c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 5506624902925478189}
