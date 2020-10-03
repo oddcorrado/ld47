@@ -7,8 +7,8 @@ public class AiRandomFly : MonoBehaviour
     [SerializeField] Controller controller;
     [SerializeField] float startX, startY, endX, endY;
 
-    bool leftDirection = false;
-    bool downDirection = false;
+    public bool leftDirection = false;
+    public bool downDirection = false;
     bool active = true;
 
     float timeStart, timeSpan, verSpeed, horSpeed;
