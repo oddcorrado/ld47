@@ -29,9 +29,9 @@ public class Mutator : MonoBehaviour
             case LoopState.State1: larva.SetActive(true); return;
             case LoopState.Transition12: larva.SetActive(true); return;
             case LoopState.State2: cockcroach.SetActive(true); return;
-            case LoopState.Transition23: larva.SetActive(true); return;
+            case LoopState.Transition23: cockcroach.SetActive(true); return;
             case LoopState.State3: butterfly.SetActive(true); return;
-            case LoopState.Transition31: larva.SetActive(true); return;
+            case LoopState.Transition31: butterfly.SetActive(true); return;
         }
     }
 
