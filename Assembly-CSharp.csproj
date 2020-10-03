@@ -67,6 +67,8 @@
     <Compile Include="Assets\Scripts\Player\Mutator.cs" />
     <Compile Include="Assets\Scripts\Decisions\NPC\AiSwarmFly.cs" />
     <Compile Include="Assets\Scripts\Decisions\NPC\SwarmManager.cs" />
+    <Compile Include="Assets\Scripts\Controllers\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\ControllerStatic.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

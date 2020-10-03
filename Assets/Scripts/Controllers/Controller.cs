@@ -23,18 +23,11 @@ public class Controller : MonoBehaviour
         }
         set
         {
+            Debug.Log("ANIMATOR " + value);
             if (animatorState == value) return;
             animatorState = value;
             if(animator != null) animator.SetInteger("state", value);
         }
-    }
-
-    protected virtual void Update()
-    {
-        if (Mathf.Abs(PressedState.hor) < Mathf.Epsilon) return;
-
-        if (PressedState.hor > 0) transform.localScale = new Vector2(-1, 1);
-        else transform.localScale = new Vector2(1, 1);
     }
 
     private void OnEnable()
