@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156690015}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: -3, z: 0}
+  m_LocalPosition: {x: -2, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -228,32 +228,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177685506}
   m_CullTransparentMesh: 0
---- !u!1 &837507582 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5300070137867761958, guid: a57c541d0d5cd49b9a8aed195fd96aa4,
-    type: 3}
-  m_PrefabInstance: {fileID: 910851933}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &837507586 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5300070137867761953, guid: a57c541d0d5cd49b9a8aed195fd96aa4,
     type: 3}
   m_PrefabInstance: {fileID: 910851933}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &837507587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837507582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7cb03a4015cb364c8ee6a18e26cfb11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 837507582}
-  RespawnPoint: {fileID: 156690015}
 --- !u!1001 &910851933
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -261,15 +241,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 719992825181108220, guid: a57c541d0d5cd49b9a8aed195fd96aa4,
+        type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 156690016}
+    - target: {fileID: 3501484208274087922, guid: a57c541d0d5cd49b9a8aed195fd96aa4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501484208274087922, guid: a57c541d0d5cd49b9a8aed195fd96aa4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501484208274087922, guid: a57c541d0d5cd49b9a8aed195fd96aa4,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501484208274087922, guid: a57c541d0d5cd49b9a8aed195fd96aa4,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5300070137867761953, guid: a57c541d0d5cd49b9a8aed195fd96aa4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 5300070137867761953, guid: a57c541d0d5cd49b9a8aed195fd96aa4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5300070137867761953, guid: a57c541d0d5cd49b9a8aed195fd96aa4,
         type: 3}
@@ -321,7 +326,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5600935869844041902, guid: a57c541d0d5cd49b9a8aed195fd96aa4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a57c541d0d5cd49b9a8aed195fd96aa4, type: 3}
 --- !u!1 &941800560
 GameObject:
@@ -828,6 +834,7 @@ GameObject:
   - component: {fileID: 1590196187}
   - component: {fileID: 1590196188}
   - component: {fileID: 1590196189}
+  - component: {fileID: 1590196190}
   m_Layer: 0
   m_Name: IceTiles_34
   m_TagString: Untagged
@@ -927,6 +934,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1590196190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590196186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba50cab77bd7d2641b6bc6d6e97c5c19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1661719382
 GameObject:
   m_ObjectHideFlags: 0
