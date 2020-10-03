@@ -8,3 +8,7 @@ Builds
 Packages
 .DS_Store
 .csproj
+ld47.sln
+test
+Unity.2D*
+Assembly-CSharp.csproj
