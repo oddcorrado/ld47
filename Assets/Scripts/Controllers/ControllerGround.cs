@@ -9,9 +9,12 @@ public class ControllerGround : Controller
     [SerializeField] float vspeed = 10;
     [SerializeField] float inertia = 0.8f;
     [SerializeField] float gravity = 10;
+    [SerializeField] float maxFallVelocity = -10;
 
     protected virtual void FixedUpdate()
     {
+        if (body == null) return;
+
         LayerMask mask = LayerMask.GetMask("wall");
         var cast = Physics2D.Raycast(transform.position, Vector2.down, 1.05f, mask);
 
@@ -21,7 +24,15 @@ public class ControllerGround : Controller
         else vel = new Vector2(vel.x * inertia, vel.y);
 
         if (Mathf.Abs(PressedState.ver) > 0 && cast.collider != null) vel += new Vector2(0, vspeed);
-        else vel+= new Vector2(0, -gravity);
+        else vel = new Vector2(vel.x, Mathf.Max(vel.y - gravity, maxFallVelocity));
+
+        if (cast.collider == null)
+            AnimatorState = 2;
+        else
+        {
+            if (Mathf.Abs(PressedState.hor) > 0) AnimatorState = 1;
+            else AnimatorState = 0;
+        }
 
         body.velocity = vel;
     }
