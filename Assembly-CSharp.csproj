@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Player\Spikes.cs" />
     <Compile Include="Assets\Scripts\Decisions\NPC\AiRandomFly.cs" />
     <Compile Include="Assets\Scripts\Controllers\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\ControllerStatic.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
