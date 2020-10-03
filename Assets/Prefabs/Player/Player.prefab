@@ -206,6 +206,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   corpseCount: 0
+  duration: 3
+  corpsesNeeded: 3
+  nest: {fileID: 0}
 --- !u!61 &7703176248224337212
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -216,7 +219,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -586,7 +589,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 1.6320382
+  m_Mass: 0.19203815
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -910,10 +913,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   body: {fileID: 5300070137867761955}
-  hspeed: 10
-  vspeed: 10
+  hspeed: 3
+  vspeed: 3
   inertia: 0.8
-  gravity: 10
+  gravity: 3
 --- !u!1 &7365488739623591706
 GameObject:
   m_ObjectHideFlags: 0

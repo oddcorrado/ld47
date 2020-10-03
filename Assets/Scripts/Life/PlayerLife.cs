@@ -16,6 +16,7 @@ public class PlayerLife : MonoBehaviour
 
     public void Die()
     {
+        Debug.Log("KILL ME");
         transform.position = spawnPoint.position;
         stateManager.StartWheel();
     }
