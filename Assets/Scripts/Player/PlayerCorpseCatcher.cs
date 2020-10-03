@@ -7,6 +7,7 @@ public class PlayerCorpseCatcher : MonoBehaviour
     [SerializeField] private int corpseCount;
     [SerializeField] private float duration = 3;
     [SerializeField] private int corpsesNeeded = 3;
+    [SerializeField] private BuildingNest buildingNest;
     [SerializeField] private GameObject nest;
 
     public bool IsBuildingNest { get; set; }
@@ -22,7 +23,7 @@ public class PlayerCorpseCatcher : MonoBehaviour
     {
         var life = collision.gameObject.GetComponent<CorpseLife>();
 
-        if (life != null && corpseCount < corpsesNeeded)
+        if (life != null && corpseCount < 1)
         {
             life.Die();
             corpseCount++;
@@ -38,7 +39,7 @@ public class PlayerCorpseCatcher : MonoBehaviour
             IsBuildingNest = false;
         }
 
-        if (cast.collider != null && !IsBuildingNest && corpseCount >= corpsesNeeded)
+        if (cast.collider != null && !IsBuildingNest && corpseCount >= 1)
         {
             buildingPos = transform.position;
             buildingStartDate = Time.time;
@@ -47,7 +48,20 @@ public class PlayerCorpseCatcher : MonoBehaviour
 
         if(IsBuildingNest && Time.time > buildingStartDate + duration)
         {
-            nest.transform.position = transform.position;
+            IsBuildingNest = false;
+            if ((transform.position - buildingNest.transform.position).magnitude < 1)
+                buildingNest.Count++;
+            else
+            {
+                buildingNest.Count = 1;
+                buildingNest.transform.position = transform.position;
+                buildingNest.gameObject.SetActive(true);
+            }
+            if (buildingNest.Count >= corpsesNeeded)
+            {
+                nest.transform.position = buildingNest.transform.position;
+                buildingNest.gameObject.SetActive(false);
+            }
             corpseCount = 0;
         }
 
