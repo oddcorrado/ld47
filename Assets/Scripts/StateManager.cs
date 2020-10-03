@@ -12,10 +12,10 @@ public class StateManager : MonoBehaviour
 
     bool Running = false;
 
-    State CurrentState = State.State1;
+    public LoopState CurrentState = LoopState.State1;
     float StartTime;
 
-    int totalStateLength = Enum.GetNames(typeof(State)).Length;
+    int totalStateLength = Enum.GetNames(typeof(LoopState)).Length;
 
     private void Start()
     {
@@ -27,7 +27,7 @@ public class StateManager : MonoBehaviour
         if(!Running)
         {
             Running = true;
-            CurrentState = (State)0;
+            CurrentState = (LoopState)0;
             StartTime = Time.time;
 
             ActivateState(CurrentState);
@@ -56,7 +56,7 @@ public class StateManager : MonoBehaviour
 
             if(progress > 1)
             {
-                CurrentState = (State)nextIndex;
+                CurrentState = (LoopState)nextIndex;
                 StartTime = Time.time;
 
                 ActivateState(CurrentState);
@@ -64,34 +64,34 @@ public class StateManager : MonoBehaviour
         }
     }
 
-    void ActivateState(State s)
+    void ActivateState(LoopState s)
     {
         switch (s)
         {
-            case State.State1:
-                Debug.Log("Activating " + State.State1.ToString() + " for " + times[(int)State.State1] + " seconds");
+            case LoopState.State1:
+                Debug.Log("Activating " + LoopState.State1.ToString() + " for " + times[(int)LoopState.State1] + " seconds");
                 break;
-            case State.Transition12:
-                Debug.Log("Activating " + State.Transition12.ToString() + " for " + times[(int)State.Transition12] + " seconds");
+            case LoopState.Transition12:
+                Debug.Log("Activating " + LoopState.Transition12.ToString() + " for " + times[(int)LoopState.Transition12] + " seconds");
                 break;
-            case State.State2:
-                Debug.Log("Activating " + State.State2.ToString() + " for " + times[(int)State.State2] + " seconds");
+            case LoopState.State2:
+                Debug.Log("Activating " + LoopState.State2.ToString() + " for " + times[(int)LoopState.State2] + " seconds");
                 break;
-            case State.Transition23:
-                Debug.Log("Activating " + State.Transition23.ToString() + " for " + times[(int)State.Transition23] + " seconds");
+            case LoopState.Transition23:
+                Debug.Log("Activating " + LoopState.Transition23.ToString() + " for " + times[(int)LoopState.Transition23] + " seconds");
                 break;
-            case State.State3:
-                Debug.Log("Activating " + State.State3.ToString() + " for " + times[(int)State.State3] + " seconds");
+            case LoopState.State3:
+                Debug.Log("Activating " + LoopState.State3.ToString() + " for " + times[(int)LoopState.State3] + " seconds");
                 break;
-            case State.Transition31:
-                Debug.Log("Activating " + State.Transition31.ToString() + " for " + times[(int)State.Transition31] + " seconds");
+            case LoopState.Transition31:
+                Debug.Log("Activating " + LoopState.Transition31.ToString() + " for " + times[(int)LoopState.Transition31] + " seconds");
                 break;
         }
     }
 }
 
 
-enum State
+public enum LoopState
 {
     State1,
     Transition12,
