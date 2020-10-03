@@ -12,7 +12,7 @@ public class Controller : MonoBehaviour
         public float ver;
     }
 
-    public Pressed PressedState { get; set; }
+    public Pressed PressedState { get; set; } = new Pressed();
 
     private int animatorState = -1;
     public int AnimatorState
