@@ -109,6 +109,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5836811765825812413}
   - component: {fileID: 4218324703654975365}
+  - component: {fileID: 122626739}
   m_Layer: 0
   m_Name: KillZone
   m_TagString: Untagged
@@ -147,6 +148,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
+--- !u!114 &122626739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269051089810291438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78409ddef1d324774ba9d0cf1ee2a14a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3174502585273818655
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +391,7 @@ GameObject:
   - component: {fileID: 5300070137867761955}
   - component: {fileID: 5300070137867761952}
   - component: {fileID: 5300070137867761954}
-  - component: {fileID: 5600935869844041902}
+  - component: {fileID: 719992825181108220}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -471,7 +484,7 @@ MonoBehaviour:
   larvaTransition: {fileID: 7365488739623591706}
   cockcroachTransition: {fileID: 7395792588735541930}
   butterflyTransition: {fileID: 1114478240488663691}
---- !u!114 &5600935869844041902
+--- !u!114 &719992825181108220
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -480,10 +493,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5300070137867761958}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50abb702ebf7e4152ab115cf601c0ddc, type: 3}
+  m_Script: {fileID: 11500000, guid: a19225a04b7e349438376c8155b3ef0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 5300070137867761953}
+  spawnPoint: {fileID: 0}
 --- !u!1 &5300070138308672551
 GameObject:
   m_ObjectHideFlags: 0

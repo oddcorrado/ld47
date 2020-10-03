@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3022216086122756049}
   - component: {fileID: 3022216086122756048}
   - component: {fileID: 3022216086122756051}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CorpseStandard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
