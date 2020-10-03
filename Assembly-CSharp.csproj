@@ -61,6 +61,8 @@
     <Compile Include="Assets\Scripts\Decisions\Player\DecisionPlayer.cs" />
     <Compile Include="Assets\Scripts\Controllers\ControllerFlappy.cs" />
     <Compile Include="Assets\Scripts\Decisions\NPC\AiRandomWalk.cs" />
+    <Compile Include="Assets\Scripts\Decisions\NPC\AiRandomFly.cs" />
+    <Compile Include="Assets\Scripts\Controllers\ControllerFloaty.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

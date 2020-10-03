@@ -15,7 +15,7 @@ public class ControllerGround : Controller
         LayerMask mask = LayerMask.GetMask("wall");
         var cast = Physics2D.Raycast(transform.position, Vector2.down, 1.05f, mask);
 
-        Vector2 vel = body.velocity;
+        var vel = body.velocity;
 
         if (Mathf.Abs(PressedState.hor) > 0 ) vel = new Vector2(hspeed * PressedState.hor, vel.y);
         else vel = new Vector2(vel.x * inertia, vel.y);
