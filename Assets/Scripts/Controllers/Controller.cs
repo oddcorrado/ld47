@@ -29,4 +29,10 @@ public class Controller : MonoBehaviour
             if(animator != null) animator.SetInteger("state", value);
         }
     }
+
+    private void OnEnable()
+    {
+        AnimatorState = -1;
+        AnimatorState = 0;
+    }
 }
