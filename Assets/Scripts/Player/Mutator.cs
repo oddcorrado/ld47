@@ -10,6 +10,7 @@ public class Mutator : MonoBehaviour
     [SerializeField] GameObject larvaTransition;
     [SerializeField] GameObject cockcroachTransition;
     [SerializeField] GameObject butterflyTransition;
+    [SerializeField] GameObject nest;
 
     private StateManager stateManager;
     private LoopState currentState;
@@ -32,7 +33,7 @@ public class Mutator : MonoBehaviour
         butterflyTransition.SetActive(false);
         switch (state)
         {
-            case LoopState.State1: larva.SetActive(true); return;
+            case LoopState.State1: if (nest != null) { transform.position = nest.transform.position; } larva.SetActive(true); return;
             case LoopState.Transition12: larvaTransition.SetActive(true); return;
             case LoopState.State2: cockcroach.SetActive(true); return;
             case LoopState.Transition23: cockcroachTransition.SetActive(true); return;

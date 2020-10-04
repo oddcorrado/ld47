@@ -34,6 +34,14 @@ public class StateManager : MonoBehaviour
         }
     }
 
+    public void Reset()
+    {
+        CurrentState = (LoopState)0;
+        StartTime = Time.time;
+
+        ActivateState(CurrentState);
+    }
+
     private void LateUpdate()
     {
         if(Running)
