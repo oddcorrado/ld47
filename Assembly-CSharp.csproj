@@ -63,10 +63,13 @@
     <Compile Include="Assets\Scripts\Controllers\ControllerStatic.cs" />
     <Compile Include="Assets\Scripts\Controllers\ControllerGround.cs" />
     <Compile Include="Assets\Scripts\Decisions\NPC\AiRandomWalk.cs" />
+    <Compile Include="Assets\Scripts\MusicController.cs" />
     <Compile Include="Assets\Scripts\Controllers\Controller.cs" />
     <Compile Include="Assets\Scripts\Decisions\Player\DecisionPlayer.cs" />
     <Compile Include="Assets\Scripts\Player\Mutator.cs" />
     <Compile Include="Assets\Scripts\StateManager.cs" />
+    <Compile Include="Assets\Scripts\Decisions\NPC\AiFlyBasicAttack.cs" />
+    <Compile Include="Assets\Scripts\Decisions\NPC\AiFlyBasicFlee.cs" />
     <Compile Include="Assets\Scripts\Player\BuildingNest.cs" />
     <Compile Include="Assets\Scripts\Player\RockDestroyer.cs" />
     <Compile Include="Assets\Scripts\Decisions\NPC\AiSwarmFly.cs" />
@@ -74,9 +77,6 @@
     <Compile Include="Assets\Scripts\Life\AILife.cs" />
     <Compile Include="Assets\Scripts\Life\RockLife.cs" />
     <Compile Include="Assets\Scripts\Life\CorpseLife.cs" />
-    <Compile Include="Assets\Scripts\MusiqueController.cs" />
-    <Compile Include="Assets\Scripts\Decisions\NPC\AiFlyBasicAttack.cs" />
-    <Compile Include="Assets\Scripts\Decisions\NPC\AiFlyBasicFlee.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -77,22 +77,26 @@ public class StateManager : MonoBehaviour
 
     void ActivateState(LoopState s)
     {
+        if (musicController == null) musicController = FindObjectOfType<MusicController>();
         switch (s)
         {
             case LoopState.State1:
                 Debug.Log("Activating " + LoopState.State1.ToString() + " for " + times[(int)LoopState.State1] + " seconds");
+                musicController.Index = 0;
                 break;
             case LoopState.Transition12:
                 Debug.Log("Activating " + LoopState.Transition12.ToString() + " for " + times[(int)LoopState.Transition12] + " seconds");
                 break;
             case LoopState.State2:
                 Debug.Log("Activating " + LoopState.State2.ToString() + " for " + times[(int)LoopState.State2] + " seconds");
+                musicController.Index = 1;
                 break;
             case LoopState.Transition23:
                 Debug.Log("Activating " + LoopState.Transition23.ToString() + " for " + times[(int)LoopState.Transition23] + " seconds");
                 break;
             case LoopState.State3:
                 Debug.Log("Activating " + LoopState.State3.ToString() + " for " + times[(int)LoopState.State3] + " seconds");
+                musicController.Index = 2;
                 break;
             case LoopState.Transition31:
                 Debug.Log("Activating " + LoopState.Transition31.ToString() + " for " + times[(int)LoopState.Transition31] + " seconds");

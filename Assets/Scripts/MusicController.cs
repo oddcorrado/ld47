@@ -9,8 +9,12 @@ public class MusicController : MonoBehaviour
 
     public int Index { get; set; } = 0;
 
+    
+
     private void Update()
     {
+        
+
         for(int i = 0; i < sources.Length; i++)
         {
             var source = sources[i];
@@ -25,5 +29,26 @@ public class MusicController : MonoBehaviour
                     source.volume = Mathf.Min(maxVolume, source.volume + 0.02f);
             }
         }
+
+
+        
     }
+
+    void CurrentState(LoopState a)
+    {
+        switch (a)
+        {
+            case LoopState.State1:
+                Index = 1;
+                break;
+            case LoopState.State2:
+                Index = 2;
+                break;
+            case LoopState.State3:
+                Index = 3;
+                break;
+
+        }
+    }
+
 }
