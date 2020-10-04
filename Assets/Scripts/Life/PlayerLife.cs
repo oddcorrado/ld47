@@ -18,6 +18,6 @@ public class PlayerLife : MonoBehaviour
     {
         Debug.Log("KILL ME");
         transform.position = spawnPoint.position;
-        stateManager.StartWheel();
+        stateManager.Reset();
     }
 }
