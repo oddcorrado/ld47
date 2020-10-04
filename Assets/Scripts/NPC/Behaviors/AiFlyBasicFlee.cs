@@ -5,7 +5,7 @@ using UnityEngine;
 public class AiFlyBasicFlee : MonoBehaviour
 {
     [SerializeField] Controller controller;
-    public GameObject target;
+    public Mutator target;
     [SerializeField] float seeDistance, idleSpeed, fleeSpeed;
 
     void FixedUpdate()
@@ -14,7 +14,7 @@ public class AiFlyBasicFlee : MonoBehaviour
         {
             var targetDirection = gameObject.transform.localPosition - target.transform.localPosition;
 
-            if (targetDirection.magnitude < seeDistance)
+            if (targetDirection.magnitude < seeDistance && !target.isHidden)
             {
                 controller.PressedState = new Controller.Pressed()
                 {
