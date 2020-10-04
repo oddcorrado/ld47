@@ -17,9 +17,12 @@ public class StateManager : MonoBehaviour
 
     int totalStateLength = Enum.GetNames(typeof(LoopState)).Length;
 
+    private MusicController musicController;
+
     private void Start()
     {
         StartWheel();
+        musicController = FindObjectOfType<MusicController>();
     }
 
     public void StartWheel()
