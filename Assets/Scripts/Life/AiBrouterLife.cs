@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AILife : MonoBehaviour
+public class AiBrouterLife : MonoBehaviour
 {
     [SerializeField] GameObject prefabCorpse;
     [SerializeField] GameObject prefabFx;
