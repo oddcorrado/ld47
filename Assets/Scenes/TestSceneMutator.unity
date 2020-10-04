@@ -5887,6 +5887,12 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 1955015951}
+    - target: {fileID: 2565888317001455070, guid: a57c541d0d5cd49b9a8aed195fd96aa4,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3493352576617616214, guid: 0fbf3ab82b3c5471a9bf90a8b280ce4d,
+        type: 3}
     - target: {fileID: 5300070137867761953, guid: a57c541d0d5cd49b9a8aed195fd96aa4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5952,6 +5958,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5300070138546251703, guid: a57c541d0d5cd49b9a8aed195fd96aa4,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8733505540609081892, guid: 0fbf3ab82b3c5471a9bf90a8b280ce4d,
+        type: 3}
+    - target: {fileID: 8055542491534176070, guid: a57c541d0d5cd49b9a8aed195fd96aa4,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3493352576617616214, guid: 0fbf3ab82b3c5471a9bf90a8b280ce4d,
+        type: 3}
+    - target: {fileID: 8772062937097154401, guid: a57c541d0d5cd49b9a8aed195fd96aa4,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -943281373883554285, guid: f14786b56ec7c495aac4e1ff5806245d,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a57c541d0d5cd49b9a8aed195fd96aa4, type: 3}
 --- !u!1001 &6284317937891447839
