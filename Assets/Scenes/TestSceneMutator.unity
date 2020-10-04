@@ -485,11 +485,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   times:
-  - 10
+  - 15
   - 1
-  - 10
+  - 15
   - 1
-  - 60
+  - 15
   - 1
   stateImages:
   - {fileID: 1297332994}
@@ -5894,7 +5894,7 @@ PrefabInstance:
     - target: {fileID: 163903331395226503, guid: a57c541d0d5cd49b9a8aed195fd96aa4,
         type: 3}
       propertyPath: duration
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 719992825181108220, guid: a57c541d0d5cd49b9a8aed195fd96aa4,
         type: 3}
@@ -5956,6 +5956,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5300070137867761954, guid: a57c541d0d5cd49b9a8aed195fd96aa4,
+        type: 3}
+      propertyPath: nest
+      value: 
+      objectReference: {fileID: 1955015950}
     - target: {fileID: 5300070137867761958, guid: a57c541d0d5cd49b9a8aed195fd96aa4,
         type: 3}
       propertyPath: m_Name
