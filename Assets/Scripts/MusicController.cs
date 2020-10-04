@@ -6,6 +6,7 @@ public class MusicController : MonoBehaviour
 {
     [SerializeField] AudioSource[] sources;
     [SerializeField] float maxVolume = 0.5f;
+    [SerializeField] float fadeSpeed = 0.002f;
 
     public int Index { get; set; } = 0;
 
@@ -21,12 +22,12 @@ public class MusicController : MonoBehaviour
             if(i != Index)
             {
                 if (source.volume > 0)
-                    source.volume = Mathf.Max(0, source.volume - 0.02f);
+                    source.volume = Mathf.Max(0, source.volume - fadeSpeed);
             }
             else
             {
                 if (source.volume < maxVolume)
-                    source.volume = Mathf.Min(maxVolume, source.volume + 0.02f);
+                    source.volume = Mathf.Min(maxVolume, source.volume + fadeSpeed);
             }
         }
 

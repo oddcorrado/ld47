@@ -178,6 +178,7 @@ MonoBehaviour:
   - {fileID: 3513149460032719567}
   - {fileID: 3513149460576957787}
   maxVolume: 0.5
+  fadeSpeed: 0.001
 --- !u!1 &3513149460576957788
 GameObject:
   m_ObjectHideFlags: 0
