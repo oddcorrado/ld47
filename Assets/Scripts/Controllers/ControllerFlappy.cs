@@ -17,6 +17,7 @@ public class ControllerFlappy : Controller
         if (Mathf.Abs(PressedState.hor) > 0)
         {
             vel = new Vector2(hspeed * PressedState.hor, vel.y);
+            AnimatorState = 1;
         }
         else
         {
@@ -26,11 +27,19 @@ public class ControllerFlappy : Controller
         if (Mathf.Abs(PressedState.ver) > 0)
         {
             vel = new Vector2(vel.x, vspeed);
+            AnimatorState = 2;
         }
         else
         {
             vel = new Vector2(vel.x, -gravity);
         }
+
+        if (Mathf.Abs(PressedState.ver) > 0)
+            AnimatorState = 2;
+        else if (Mathf.Abs(PressedState.hor) > 0)
+            AnimatorState = 1;
+        else
+            AnimatorState = 0;
 
         body.velocity = vel;
     }
