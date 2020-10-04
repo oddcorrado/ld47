@@ -485,7 +485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   times:
-  - 15
+  - 1
   - 1
   - 15
   - 1
@@ -5775,7 +5775,7 @@ PrefabInstance:
     - target: {fileID: 2455321579305011638, guid: e7d0880a3eaad421388ac0ac487b5e57,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.795121
+      value: -2.19
       objectReference: {fileID: 0}
     - target: {fileID: 2455321579305011638, guid: e7d0880a3eaad421388ac0ac487b5e57,
         type: 3}
@@ -5999,19 +5999,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 163903331395226503, guid: a57c541d0d5cd49b9a8aed195fd96aa4,
         type: 3}
-      propertyPath: nest
-      value: 
-      objectReference: {fileID: 1955015950}
-    - target: {fileID: 163903331395226503, guid: a57c541d0d5cd49b9a8aed195fd96aa4,
-        type: 3}
       propertyPath: buildingNest
       value: 
       objectReference: {fileID: 4012406626088266740}
     - target: {fileID: 163903331395226503, guid: a57c541d0d5cd49b9a8aed195fd96aa4,
         type: 3}
-      propertyPath: duration
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: nest
+      value: 
+      objectReference: {fileID: 1955015950}
     - target: {fileID: 719992825181108220, guid: a57c541d0d5cd49b9a8aed195fd96aa4,
         type: 3}
       propertyPath: spawnPoint

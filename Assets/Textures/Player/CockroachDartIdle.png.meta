@@ -14,6 +14,18 @@ TextureImporter:
   - first:
       213: 5853677890992967244
     second: CockroachDartIdle_3
+  - first:
+      213: -8057449848684118798
+    second: CockroachDartIdle_0
+  - first:
+      213: 5762015616897253397
+    second: CockroachDartIdle_1
+  - first:
+      213: -3115134447800764420
+    second: CockroachDartIdle_2
+  - first:
+      213: -7394804565964977095
+    second: CockroachDartIdle_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,8 +130,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,8 +139,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb451097265b62af0800000000000000
-      internalID: -421450080571009858
+      spriteID: 2fc78a58d003e2090800000000000000
+      internalID: -8057449848684118798
       vertices: []
       indices: 
       edges: []
@@ -137,10 +149,10 @@ TextureImporter:
       name: CockroachDartIdle_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 64
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f57b1153d30a6c590800000000000000
-      internalID: -7654254331925776545
+      spriteID: 5100a63dcaac6ff40800000000000000
+      internalID: 5762015616897253397
       vertices: []
       indices: 
       edges: []
@@ -158,10 +170,10 @@ TextureImporter:
       name: CockroachDartIdle_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 128
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb8c35b6e9d411320800000000000000
-      internalID: 2526886208732383423
+      spriteID: cf7b04379b1d4c4d0800000000000000
+      internalID: -3115134447800764420
       vertices: []
       indices: 
       edges: []
@@ -179,10 +191,10 @@ TextureImporter:
       name: CockroachDartIdle_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 192
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,8 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4e813a17017c3150800000000000000
-      internalID: 5853677890992967244
+      spriteID: 93c88363d60606990800000000000000
+      internalID: -7394804565964977095
       vertices: []
       indices: 
       edges: []
