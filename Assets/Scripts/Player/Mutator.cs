@@ -40,7 +40,8 @@ public class Mutator : MonoBehaviour
             case LoopState.State3: butterfly.SetActive(true); return;
             case LoopState.Transition31: butterflyTransition.SetActive(true); return;
         }
-    }
+
+   }
 
     void Update()
     {
