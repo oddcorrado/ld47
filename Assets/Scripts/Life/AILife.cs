@@ -5,11 +5,17 @@ using UnityEngine;
 public class AILife : MonoBehaviour
 {
     [SerializeField] GameObject prefabCorpse;
+    [SerializeField] GameObject prefabFx;
+
     public void Die()
     {
         var go = Instantiate(prefabCorpse);
-        Destroy(gameObject);
         go.transform.position = transform.position;
 
+        var fx = Instantiate(prefabFx);
+        fx.transform.position = transform.position;
+        fx.transform.parent = go.transform;
+
+        Destroy(gameObject);
     }
 }
