@@ -206,8 +206,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   corpseCount: 0
-  duration: 3
+  duration: 1
   corpsesNeeded: 3
+  buildingNest: {fileID: 0}
   nest: {fileID: 0}
 --- !u!61 &7703176248224337212
 BoxCollider2D:
@@ -642,6 +643,7 @@ MonoBehaviour:
   larvaTransition: {fileID: 7365488739623591706}
   cockcroachTransition: {fileID: 7395792588735541930}
   butterflyTransition: {fileID: 1114478240488663691}
+  nest: {fileID: 0}
 --- !u!114 &719992825181108220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -668,6 +670,7 @@ GameObject:
   - component: {fileID: 5300070138308672544}
   - component: {fileID: 5300070138308672545}
   - component: {fileID: 1598475759}
+  - component: {fileID: 8937313520478245603}
   m_Layer: 0
   m_Name: Cockroach
   m_TagString: Untagged
@@ -732,7 +735,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -3460159215480765649, guid: c0326e4fb0e58473589ed34cd7b8e323,
     type: 3}
-  m_Color: {r: 0.15044188, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -800,6 +803,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &8937313520478245603
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5300070138308672551}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: addedabd51ef747558c02ec2bb1d9c3d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5300070138546251705
 GameObject:
   m_ObjectHideFlags: 0
