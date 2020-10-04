@@ -72,6 +72,8 @@
     <Compile Include="Assets\Scripts\Player\AiKiller.cs" />
     <Compile Include="Assets\Scripts\Life\AILife.cs" />
     <Compile Include="Assets\Scripts\Life\CorpseLife.cs" />
+    <Compile Include="Assets\Scripts\Player\RockDestroyer.cs" />
+    <Compile Include="Assets\Scripts\Life\RockLife.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
