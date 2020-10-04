@@ -39,13 +39,13 @@ public class MusicController : MonoBehaviour
     {
         switch (a)
         {
-            case LoopState.State1:
+            case LoopState.LarvaBirth:
                 Index = 1;
                 break;
-            case LoopState.State2:
+            case LoopState.LarvaToRoach:
                 Index = 2;
                 break;
-            case LoopState.State3:
+            case LoopState.RoachToButterfly:
                 Index = 3;
                 break;
 

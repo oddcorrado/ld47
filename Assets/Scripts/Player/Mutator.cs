@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Mutator : MonoBehaviour
 {
+    [SerializeField] GameObject larvabirth;
     [SerializeField] GameObject larva;
     [SerializeField] GameObject cockcroach;
     [SerializeField] GameObject butterfly;
-    [SerializeField] GameObject larvaTransition;
-    [SerializeField] GameObject cockcroachTransition;
-    [SerializeField] GameObject butterflyTransition;
+    [SerializeField] GameObject larvaToRoach;
+    [SerializeField] GameObject roachToButterfly;
+    [SerializeField] GameObject butterflyDeath;
     [SerializeField] GameObject nest;
 
     private StateManager stateManager;
@@ -28,17 +29,18 @@ public class Mutator : MonoBehaviour
         larva.SetActive(false);
         cockcroach.SetActive(false);
         butterfly.SetActive(false);
-        larvaTransition.SetActive(false);
-        cockcroachTransition.SetActive(false);
-        butterflyTransition.SetActive(false);
+        larvaToRoach.SetActive(false);
+        roachToButterfly.SetActive(false);
+        butterflyDeath.SetActive(false);
         switch (state)
         {
-            case LoopState.State1: if (nest != null) { transform.position = nest.transform.position; } larva.SetActive(true); return;
-            case LoopState.Transition12: larvaTransition.SetActive(true); return;
-            case LoopState.State2: cockcroach.SetActive(true); return;
-            case LoopState.Transition23: cockcroachTransition.SetActive(true); return;
-            case LoopState.State3: butterfly.SetActive(true); return;
-            case LoopState.Transition31: butterflyTransition.SetActive(true); return;
+            case LoopState.LarvaBirth: if (nest != null) { transform.position = nest.transform.position; } larvabirth.SetActive(true); return;
+            case LoopState.Larva: larva.SetActive(true); return;
+            case LoopState.LarvaToRoach: larvaToRoach.SetActive(true); return;
+            case LoopState.Roach: cockcroach.SetActive(true); return;
+            case LoopState.RoachToButterfly: roachToButterfly.SetActive(true); return;
+            case LoopState.Butterfly: butterfly.SetActive(true); return;
+            case LoopState.ButterflyDeath: butterflyDeath.SetActive(true); return;
         }
 
    }
