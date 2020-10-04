@@ -1,31 +1,19 @@
 fileFormatVersion: 2
-guid: f14786b56ec7c495aac4e1ff5806245d
+guid: 965ca52afe84f46f9a0b03690b154d37
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2750372464975957325
-    second: LarvaWalk_0
+      213: -421450080571009858
+    second: CockroachDartIdle_0
   - first:
-      213: -8261126090313018943
-    second: LarvaWalk_1
+      213: -7654254331925776545
+    second: CockroachDartIdle_1
   - first:
-      213: 280630820251348928
-    second: LarvaWalk_2
+      213: 2526886208732383423
+    second: CockroachDartIdle_2
   - first:
-      213: -6185085788352612746
-    second: LarvaWalk_3
-  - first:
-      213: 281284313878616845
-    second: LarvaWalk_4
-  - first:
-      213: -7722189345049432988
-    second: LarvaWalk_5
-  - first:
-      213: -8850614405546927272
-    second: LarvaWalk_6
-  - first:
-      213: -943281373883554285
-    second: LarvaWalk_7
+      213: 5853677890992967244
+    second: CockroachDartIdle_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -125,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LarvaWalk_0
+      name: CockroachDartIdle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -139,14 +127,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b2b711b0d6b4d9d0800000000000000
-      internalID: -2750372464975957325
+      spriteID: eb451097265b62af0800000000000000
+      internalID: -421450080571009858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LarvaWalk_1
+      name: CockroachDartIdle_1
       rect:
         serializedVersion: 2
         x: 32
@@ -160,14 +148,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c15e2617959a5d80800000000000000
-      internalID: -8261126090313018943
+      spriteID: f57b1153d30a6c590800000000000000
+      internalID: -7654254331925776545
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LarvaWalk_2
+      name: CockroachDartIdle_2
       rect:
         serializedVersion: 2
         x: 64
@@ -181,14 +169,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cfab128e3005e300800000000000000
-      internalID: 280630820251348928
+      spriteID: fb8c35b6e9d411320800000000000000
+      internalID: 2526886208732383423
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LarvaWalk_3
+      name: CockroachDartIdle_3
       rect:
         serializedVersion: 2
         x: 96
@@ -202,92 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 676fce7de392a2aa0800000000000000
-      internalID: -6185085788352612746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LarvaWalk_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d0bdf99d79257e300800000000000000
-      internalID: 281284313878616845
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LarvaWalk_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 46ca50064b545d490800000000000000
-      internalID: -7722189345049432988
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LarvaWalk_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85b9b69371d4c2580800000000000000
-      internalID: -8850614405546927272
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LarvaWalk_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 316ad62969ac8e2f0800000000000000
-      internalID: -943281373883554285
+      spriteID: c4e813a17017c3150800000000000000
+      internalID: 5853677890992967244
       vertices: []
       indices: 
       edges: []
