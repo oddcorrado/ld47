@@ -16,6 +16,8 @@ public class Mutator : MonoBehaviour
     private StateManager stateManager;
     private LoopState currentState;
 
+    public bool isHidden = false;
+
     internal LoopState GetCurrentState()
     {
         return currentState;

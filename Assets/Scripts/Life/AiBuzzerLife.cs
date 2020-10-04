@@ -47,8 +47,8 @@ public class AiBuzzerLife : MonoBehaviour
         m = FindObjectOfType<Mutator>();
         if (m != null)
         {
-            GetComponent<AiFlyBasicAttack>().target = m.gameObject;
-            GetComponent<AiFlyBasicFlee>().target = m.gameObject;
+            GetComponent<AiFlyBasicAttack>().target = m;
+            GetComponent<AiFlyBasicFlee>().target = m;
         }
     }
 
