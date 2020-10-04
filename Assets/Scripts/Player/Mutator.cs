@@ -16,6 +16,11 @@ public class Mutator : MonoBehaviour
     private StateManager stateManager;
     private LoopState currentState;
 
+    internal LoopState GetCurrentState()
+    {
+        return currentState;
+    }
+
     IEnumerator Start()
     {
         yield return null;

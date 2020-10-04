@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class AiRandomWalk : MonoBehaviour
+public class AiWalkRandom : MonoBehaviour
 {
     [SerializeField] Controller controller;
     public float startX, endX;

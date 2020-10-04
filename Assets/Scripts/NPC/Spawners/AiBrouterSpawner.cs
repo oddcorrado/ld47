@@ -30,7 +30,7 @@ public class AiBrouterSpawner : MonoBehaviour
             ai.transform.localPosition = Vector2.zero;
             ai.transform.localScale = new Vector2(1.3f,1.3f);
 
-            var walk = ai.GetComponent<AiRandomWalk>();
+            var walk = ai.GetComponent<AiWalkRandom>();
             walk.startX = startX;
             walk.endX = endX;
 

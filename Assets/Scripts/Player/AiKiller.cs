@@ -18,7 +18,7 @@ public class AiKiller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var life = collision.gameObject.GetComponent<AILife>();
+        var life = collision.gameObject.GetComponent<AiBrouterLife>();
 
         if (life != null)
         {
