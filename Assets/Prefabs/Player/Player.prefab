@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -890895462299276387, guid: c0326e4fb0e58473589ed34cd7b8e323,
+  m_Sprite: {fileID: 3493352576617616214, guid: 0fbf3ab82b3c5471a9bf90a8b280ce4d,
     type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -686,12 +686,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 680a135a4030342c5abe4007dcbb79d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  larvabirth: {fileID: 5300070137798060009}
   larva: {fileID: 5300070137798060009}
   cockcroach: {fileID: 5300070138308672551}
   butterfly: {fileID: 5300070138546251705}
-  larvaTransition: {fileID: 7365488739623591706}
-  cockcroachTransition: {fileID: 7395792588735541930}
-  butterflyTransition: {fileID: 1114478240488663691}
+  larvaToRoach: {fileID: 7365488739623591706}
+  roachToButterfly: {fileID: 7395792588735541930}
+  butterflyDeath: {fileID: 1114478240488663691}
   nest: {fileID: 0}
 --- !u!114 &719992825181108220
 MonoBehaviour:
@@ -945,7 +946,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8794096195025305039, guid: c0326e4fb0e58473589ed34cd7b8e323,
+  m_Sprite: {fileID: 8733505540609081892, guid: 0fbf3ab82b3c5471a9bf90a8b280ce4d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1060,7 +1061,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -890895462299276387, guid: c0326e4fb0e58473589ed34cd7b8e323,
+  m_Sprite: {fileID: -943281373883554285, guid: f14786b56ec7c495aac4e1ff5806245d,
     type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -1159,7 +1160,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -890895462299276387, guid: c0326e4fb0e58473589ed34cd7b8e323,
+  m_Sprite: {fileID: 3493352576617616214, guid: 0fbf3ab82b3c5471a9bf90a8b280ce4d,
     type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
