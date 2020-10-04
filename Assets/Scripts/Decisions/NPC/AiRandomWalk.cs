@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class AiRandomWalk : MonoBehaviour
 {
     [SerializeField] Controller controller;
-    [SerializeField] float startX, endX;
+    public float startX, endX;
 
     bool leftDirection = false;
     bool active = true;
