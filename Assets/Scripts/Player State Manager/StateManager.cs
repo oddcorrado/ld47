@@ -74,6 +74,15 @@ public class StateManager : MonoBehaviour
         }
     }
 
+    public void ForceState(LoopState s)
+    {
+        CurrentState = s;
+        StartTime = Time.time;
+
+        ActivateState(CurrentState);
+    }
+
+
     void ActivateState(LoopState s)
     {
         //if (musicController == null) musicController = FindObjectOfType<MusicController>();

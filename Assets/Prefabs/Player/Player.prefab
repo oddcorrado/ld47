@@ -892,6 +892,7 @@ GameObject:
   - component: {fileID: 5300070138546251700}
   - component: {fileID: 5300070138546251707}
   - component: {fileID: 7285255585656391335}
+  - component: {fileID: 3062482192961207730}
   m_Layer: 0
   m_Name: Butterfly
   m_TagString: Untagged
@@ -954,7 +955,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8733505540609081892, guid: 0fbf3ab82b3c5471a9bf90a8b280ce4d,
+  m_Sprite: {fileID: 2221715545317801976, guid: d1d92bdb4e07f463582cf9d69e8e9971,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1016,6 +1017,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &3062482192961207730
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5300070138546251705}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.43
 --- !u!1 &7365488739623591706
 GameObject:
   m_ObjectHideFlags: 0
