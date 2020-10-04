@@ -203,3 +203,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabCorpse: {fileID: 2491534781844773228, guid: 928cd9d0a4a0546cfa42aeab998494fc,
     type: 3}
+  prefabFx: {fileID: 8759302286533312265, guid: 1c3db6b8038584a6f9570b0ad494ecd6,
+    type: 3}
