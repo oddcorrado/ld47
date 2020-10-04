@@ -211,6 +211,10 @@ MonoBehaviour:
   corpsesNeeded: 3
   buildingNest: {fileID: 0}
   nest: {fileID: 0}
+  fxCatchPrefab: {fileID: 8128012248950572739, guid: d06c185802fcd48c7ad690fb3023b933,
+    type: 3}
+  fxDropPrefab: {fileID: 2788060578790971893, guid: c5905eee4c72842d7b5409463dede6f7,
+    type: 3}
 --- !u!61 &7703176248224337212
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -707,6 +711,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 0}
+  prefabFx: {fileID: 8759302286533312265, guid: 1c3db6b8038584a6f9570b0ad494ecd6,
+    type: 3}
 --- !u!1 &5300070138308672551
 GameObject:
   m_ObjectHideFlags: 0

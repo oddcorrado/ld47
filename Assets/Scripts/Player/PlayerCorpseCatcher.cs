@@ -9,6 +9,8 @@ public class PlayerCorpseCatcher : MonoBehaviour
     [SerializeField] private int corpsesNeeded = 3;
     [SerializeField] private BuildingNest buildingNest;
     [SerializeField] private GameObject nest;
+    [SerializeField] private GameObject fxCatchPrefab;
+    [SerializeField] private GameObject fxDropPrefab;
 
     public bool IsBuildingNest { get; set; }
     private Vector3 buildingPos;
@@ -27,7 +29,12 @@ public class PlayerCorpseCatcher : MonoBehaviour
         {
             life.Die();
             corpseCount++;
+
+            var fx = Instantiate(fxCatchPrefab);
+            fx.transform.position = transform.position;
+            fx.transform.parent = transform;
         }
+
     }
 
     private void FixedUpdate()
@@ -48,6 +55,10 @@ public class PlayerCorpseCatcher : MonoBehaviour
 
         if(IsBuildingNest && Time.time > buildingStartDate + duration)
         {
+            var fx = Instantiate(fxDropPrefab);
+            fx.transform.position = buildingNest.transform.position;
+            fx.transform.parent = buildingNest.transform;
+
             IsBuildingNest = false;
             if ((transform.position - buildingNest.transform.position).magnitude < 1)
                 buildingNest.Count++;

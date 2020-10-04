@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerLife : MonoBehaviour
 {
     [SerializeField] Transform spawnPoint;
+    [SerializeField] GameObject prefabFx;
 
     private StateManager stateManager;
 
@@ -16,6 +17,9 @@ public class PlayerLife : MonoBehaviour
 
     public void Die()
     {
+        var fx = Instantiate(prefabFx);
+        fx.transform.position = transform.position;
+
         Debug.Log("KILL ME");
         transform.position = spawnPoint.position;
         stateManager.Reset();
