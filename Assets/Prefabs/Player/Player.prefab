@@ -1205,7 +1205,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   body: {fileID: 5300070137867761955}
   hspeed: 5
-  vspeed: 2
+  vspeed: 4
   inertia: 0.8
   gravity: 0.8
   maxFallVelocity: -10
