@@ -11,6 +11,7 @@ public class PlayerCorpseCatcher : MonoBehaviour
     [SerializeField] private GameObject nest;
     [SerializeField] private GameObject fxCatchPrefab;
     [SerializeField] private GameObject fxDropPrefab;
+    [SerializeField] private GameObject corpse;
 
     public bool IsBuildingNest { get; set; }
     private Vector3 buildingPos;
@@ -33,6 +34,8 @@ public class PlayerCorpseCatcher : MonoBehaviour
             var fx = Instantiate(fxCatchPrefab);
             fx.transform.position = transform.position;
             fx.transform.parent = transform;
+
+            corpse.SetActive(true);
         }
 
     }
@@ -58,6 +61,8 @@ public class PlayerCorpseCatcher : MonoBehaviour
             var fx = Instantiate(fxDropPrefab);
             fx.transform.position = buildingNest.transform.position;
             fx.transform.parent = buildingNest.transform;
+
+            corpse.SetActive(false);
 
             IsBuildingNest = false;
             if ((transform.position - buildingNest.transform.position).magnitude < 1)
