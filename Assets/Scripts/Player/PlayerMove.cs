@@ -6,16 +6,25 @@ public class PlayerMove : MonoBehaviour
 {
     public GameObject PipeEnter;
     public GameObject PipeExit;
-    
+
+    public bool Larva = false;
 
     public void MoveToExit()
     {
-        gameObject.transform.position = PipeExit.transform.position;
+        if(Larva == true)
+        {
+            gameObject.transform.position = PipeExit.transform.position;
+        }
+       
     }
 
     public void MoveToEnter()
     {
-        gameObject.transform.position = PipeEnter.transform.position;
+        if(Larva == true)
+        {
+            gameObject.transform.position = PipeEnter.transform.position;
+        }
+        
     }
 
 
