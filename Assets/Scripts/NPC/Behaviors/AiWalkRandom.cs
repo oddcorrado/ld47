@@ -32,6 +32,7 @@ public class AiWalkRandom : MonoBehaviour
         {
             SetRandomState();
         }
+        Debug.Log(controller == null);
         controller.PressedState = new Controller.Pressed() { hor = (speed * (leftDirection ? -1f : 1f)) * (active ? 1f : 0f) };
     }
 

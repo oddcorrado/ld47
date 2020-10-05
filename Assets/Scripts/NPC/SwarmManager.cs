@@ -4,18 +4,48 @@ using UnityEngine;
 
 public class SwarmManager : MonoBehaviour
 {
-    public float centerThreshold, centerModThreshold;
     [SerializeField] float startX, startY, endX, endY;
+    public Vector2 currentPosition;
 
-    public List<AiSwarmFly> fliers = new List<AiSwarmFly>();
+    //public List<AiSwarmFly> fliers = new List<AiSwarmFly>();
+    public List<AiSwarmer> fliers = new List<AiSwarmer>();
+    public List<float> assignedModifiers = new List<float>();
+    public List<Vector2> assignedPositions = new List<Vector2>();
+    public List<bool> isClockwise = new List<bool>();
 
-    Vector2 currentPosition;
 
     bool leftDirection = false;
     bool downDirection = false;
     bool active = true;
 
     float timeStart, timeSpan, verSpeed, horSpeed;
+
+    private void Start()
+    {
+        currentPosition = transform.localPosition;
+        fliers.AddRange(GetComponentsInChildren<AiSwarmer>());
+        bool nextClockwise = true;
+
+        foreach(var f in fliers)
+        {
+            assignedModifiers.Add(1.5f + Random.value);
+            f.speed = 0.05f + assignedModifiers[assignedModifiers.Count - 1] / 4f;
+
+            if (nextClockwise) isClockwise.Add(true);
+            else isClockwise.Add(false);
+
+            nextClockwise = !nextClockwise;
+        }
+
+        var startingAngle = 360f / fliers.Count;
+
+        for(int i = 1; i <= fliers.Count; i++)
+        {
+            assignedPositions.Add(new Vector2(Mathf.Cos(i * startingAngle), Mathf.Sin(i * startingAngle)) * assignedModifiers[i - 1]);
+        }
+
+        currentPosition = new Vector2((startX + endX) / 2f, (startY + endY) / 2f);
+    }
 
     void FixedUpdate()
     {
@@ -40,22 +70,23 @@ public class SwarmManager : MonoBehaviour
         {
             SetRandomState();
         }
+
         currentPosition.x += horSpeed * (leftDirection ? -1f : 1f) * (active ? 1f : 0f);
         currentPosition.y += verSpeed * (downDirection ? -1f : 1f) * (active ? 1f : 0f);
 
-        foreach (var f in fliers)
+        for(int i = 0; i < fliers.Count; i++)
         {
-            var centerDirection = currentPosition + f.currentCenterThresholdMod - (Vector2)f.transform.localPosition;
-            var closestDirection = GetClosestFlier(f) * (f.isGoingForward ? 1f : -1f);
+            assignedModifiers[i] = Mathf.Clamp(assignedModifiers[i] + Random.value * 0.1f - 0.05f, 0.5f, 3.5f);
 
-            f.currentCenterThresholdMod = new Vector2
-                (
-                    Mathf.Clamp(f.currentCenterThresholdMod.x + (Random.value * centerModThreshold * 0.2f) - centerModThreshold * 0.1f, -centerModThreshold, centerModThreshold),
-                    Mathf.Clamp(f.currentCenterThresholdMod.y + (Random.value * centerModThreshold * 0.2f) - centerModThreshold * 0.1f, -centerModThreshold, centerModThreshold)
-                );
+            var posRatio = (assignedPositions[i] - currentPosition).magnitude / assignedModifiers[i];
+            var newPos = (assignedPositions[i] - currentPosition) / posRatio;
 
-            if (Random.value > 0.9f) f.isGoingForward = !f.isGoingForward;
-            f.bestDirection = centerDirection + closestDirection;
+            var randomAngle = (0.03f + Random.value * 0.03f) * (isClockwise[i] ? 1f:-1f);
+            newPos = new Vector2(Mathf.Cos(randomAngle) * newPos.x - Mathf.Sin(randomAngle) * newPos.y, Mathf.Sin(randomAngle) * newPos.x + Mathf.Cos(randomAngle) * newPos.y);
+
+            assignedPositions[i] = currentPosition + newPos;
+
+            fliers[i].assignedSwarmPosition = assignedPositions[i];
         }
     }
 
@@ -96,7 +127,7 @@ public class SwarmManager : MonoBehaviour
 
         timeStart = Time.time;
         timeSpan = 0.2f + Random.value;
-        verSpeed = 0.06f + Random.value * 0.12f;
-        horSpeed = 0.06f + Random.value * 0.12f;
+        verSpeed = 0.02f + Random.value * 0.04f;
+        horSpeed = 0.02f + Random.value * 0.04f;
     }
 }
