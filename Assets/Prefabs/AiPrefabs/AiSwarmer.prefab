@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 8825364696854313059}
-  life: {fileID: 4212441696560745645}
+  life: {fileID: 2149922588530352074}
   body: {fileID: 418465466838477321}
   target: {fileID: 0}
   speed: 0
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 8825364696854313059}
   - component: {fileID: 8146584945623933593}
   - component: {fileID: 2021598571087723312}
-  - component: {fileID: 4212441696560745645}
+  - component: {fileID: 2149922588530352074}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -210,7 +210,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.1}
+  m_Size: {x: 0.4, y: 0.4}
   m_EdgeRadius: 0
 --- !u!50 &2021598571087723312
 Rigidbody2D:
@@ -233,7 +233,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4212441696560745645
+--- !u!114 &2149922588530352074
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -242,14 +242,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4137623164102548615}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb25b426853b6a41a7cf6ada223027c, type: 3}
+  m_Script: {fileID: 11500000, guid: 26861da455e4d5d46896f02a35f7235f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   prefabCorpse: {fileID: 2491534781844773228, guid: 928cd9d0a4a0546cfa42aeab998494fc,
     type: 3}
   prefabFx: {fileID: 8759302286533312265, guid: 1c3db6b8038584a6f9570b0ad494ecd6,
     type: 3}
-  me: {fileID: 0}
+  me: {fileID: 4074222210064504640}
   isAttacking: 0
 --- !u!1 &7545177615923014214
 GameObject:

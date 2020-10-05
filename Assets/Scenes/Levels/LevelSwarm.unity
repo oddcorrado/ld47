@@ -803,6 +803,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AiSwarm 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5190756289689617593, guid: 21f875f94f1500747a13aaaa9ceec1c6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5190756289689617594, guid: 21f875f94f1500747a13aaaa9ceec1c6,
         type: 3}
       propertyPath: fliers.Array.size
@@ -22574,7 +22579,7 @@ PrefabInstance:
     - target: {fileID: 6210898929047181117, guid: edfe5341a27484819b79ed2672f09b02,
         type: 3}
       propertyPath: vspeed
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6210898929047181117, guid: edfe5341a27484819b79ed2672f09b02,
         type: 3}
@@ -22645,6 +22650,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6210898929730975711, guid: edfe5341a27484819b79ed2672f09b02,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 6210898929730975711, guid: edfe5341a27484819b79ed2672f09b02,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.47
       objectReference: {fileID: 0}
     - target: {fileID: 6210898929748169276, guid: edfe5341a27484819b79ed2672f09b02,
         type: 3}
