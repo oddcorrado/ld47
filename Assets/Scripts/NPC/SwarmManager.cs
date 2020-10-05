@@ -128,28 +128,6 @@ public class SwarmManager : MonoBehaviour
         }
     }
 
-    Vector2 GetClosestFlier(AiSwarmFly target)
-    {
-        var closestDistance = float.MaxValue;
-        var closestVector = Vector2.zero;
-
-        for(int i = 0; i <fliers.Count; i++)
-        {
-            
-            if(fliers[i] != target) 
-            {
-            var dist = (fliers[i].transform.localPosition - target.transform.localPosition).magnitude;
-                if (dist < closestDistance)
-                {
-                    closestDistance = dist;
-                    closestVector = fliers[i].transform.localPosition - target.transform.localPosition;
-                }
-            }
-        }
-
-        return closestVector;
-    }
-
     void SetRandomState()
     {
         active = Random.value > 0.25f;
