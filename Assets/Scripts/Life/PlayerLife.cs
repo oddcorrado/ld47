@@ -6,6 +6,7 @@ public class PlayerLife : MonoBehaviour
 {
     [SerializeField] Transform spawnPoint;
     [SerializeField] GameObject prefabFx;
+    [SerializeField] SoundFxPlayer soundFxPlayer;
 
     private StateManager stateManager;
 
@@ -23,5 +24,7 @@ public class PlayerLife : MonoBehaviour
         Debug.Log("KILL ME");
         transform.position = spawnPoint.position;
         stateManager.Reset();
+
+        soundFxPlayer.PlaySound(SoundFxPlayer.SoundFx.PLAYER_DIE);
     }
 }

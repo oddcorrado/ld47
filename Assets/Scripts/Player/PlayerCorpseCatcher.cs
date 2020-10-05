@@ -12,6 +12,7 @@ public class PlayerCorpseCatcher : MonoBehaviour
     [SerializeField] private GameObject fxCatchPrefab;
     [SerializeField] private GameObject fxDropPrefab;
     [SerializeField] private GameObject corpse;
+    [SerializeField] private SoundFxPlayer soundFxPlayer;
 
     public bool IsBuildingNest { get; set; }
     private Vector3 buildingPos;
@@ -36,6 +37,7 @@ public class PlayerCorpseCatcher : MonoBehaviour
             fx.transform.position = transform.position;
             fx.transform.parent = transform;
 
+            soundFxPlayer.PlaySound(SoundFxPlayer.SoundFx.NEST_CATCH);
             corpse.SetActive(true);
         }
 
@@ -64,6 +66,7 @@ public class PlayerCorpseCatcher : MonoBehaviour
             fx.transform.parent = buildingNest.transform;
 
             corpse.SetActive(false);
+            soundFxPlayer.PlaySound(SoundFxPlayer.SoundFx.NEST_DROP);
 
             IsBuildingNest = false;
             if ((transform.position - buildingNest.transform.position).magnitude < 1)
@@ -76,6 +79,7 @@ public class PlayerCorpseCatcher : MonoBehaviour
             }
             if (buildingNest.Count >= corpsesNeeded)
             {
+                soundFxPlayer.PlaySound(SoundFxPlayer.SoundFx.NEST_FINISHED);
                 nest.transform.position = buildingNest.transform.position;
                 buildingNest.gameObject.SetActive(false);
             }

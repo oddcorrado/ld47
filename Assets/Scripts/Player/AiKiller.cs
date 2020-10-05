@@ -5,6 +5,7 @@ using UnityEngine;
 public class AiKiller : MonoBehaviour
 {
     [SerializeField] Animator dartAnimator;
+    [SerializeField] SoundFxPlayer soundFxPlayer;
 
     private Coroutine coroutine;
 
@@ -25,6 +26,7 @@ public class AiKiller : MonoBehaviour
             if (coroutine != null) StopCoroutine(coroutine);
             coroutine = StartCoroutine(AnimationTimer());
 
+            soundFxPlayer.PlaySound(SoundFxPlayer.SoundFx.AI_DIE);
             brouterLife.Die();
         }
 
@@ -35,6 +37,7 @@ public class AiKiller : MonoBehaviour
             if (coroutine != null) StopCoroutine(coroutine);
             coroutine = StartCoroutine(AnimationTimer());
 
+            soundFxPlayer.PlaySound(SoundFxPlayer.SoundFx.AI_DIE);
             buzzerLife.Die();
         }
     }

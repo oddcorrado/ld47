@@ -16,17 +16,21 @@ public class ControllerGround : Controller
         if (body == null) return;
 
         LayerMask mask = LayerMask.GetMask("wall");
-        var cast = Physics2D.Raycast(transform.position, Vector2.down, 1.05f, mask);
+        var castLeft = Physics2D.Raycast(transform.position - new Vector3(0.5f, 0, 0), Vector2.down, 1.05f, mask);
+        var castCenter = Physics2D.Raycast(transform.position, Vector2.down, 1.05f, mask);
+        var castRight = Physics2D.Raycast(transform.position + new Vector3(0.5f, 0, 0), Vector2.down, 1.05f, mask);
+
+        var IsGrounded = castLeft.collider != null || castCenter.collider != null || castRight.collider != null;
 
         var vel = body.velocity;
 
         if (Mathf.Abs(PressedState.hor) > 0 ) vel = new Vector2(hspeed * PressedState.hor, vel.y);
         else vel = new Vector2(vel.x * inertia, vel.y);
 
-        if (Mathf.Abs(PressedState.ver) > 0 && cast.collider != null) vel += new Vector2(0, vspeed);
+        if (Mathf.Abs(PressedState.ver) > 0 && IsGrounded) vel += new Vector2(0, vspeed);
         else vel = new Vector2(vel.x, Mathf.Max(vel.y - gravity, maxFallVelocity));
 
-        if (cast.collider == null)
+        if (!IsGrounded)
             AnimatorState = 2;
         else
         {
