@@ -9,7 +9,7 @@ public class PlayerKiller : MonoBehaviour
         {
             var life = collision.gameObject.GetComponent<PlayerLife>();
 
-            Debug.Log("PlayerKiller:  " + collision.gameObject + " " + life);
+            // Debug.Log("PlayerKiller:  " + collision.gameObject + " " + life);
             if (life != null) life.Die();
         }
     }

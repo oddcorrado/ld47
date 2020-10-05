@@ -438,7 +438,9 @@ PrefabInstance:
     - target: {fileID: 8080575172159432492, guid: 6e1ab2b86a25a42f382da800b8cc9c49,
         type: 3}
       propertyPath: m_text
-      value: FINAL
+      value: 'LEVEL 3
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 8080575172267018762, guid: 6e1ab2b86a25a42f382da800b8cc9c49,
         type: 3}
@@ -553,7 +555,7 @@ PrefabInstance:
     - target: {fileID: 8080575172267018767, guid: 6e1ab2b86a25a42f382da800b8cc9c49,
         type: 3}
       propertyPath: sceneName
-      value: SceneTestXami
+      value: LevelBrouterPasCool2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e1ab2b86a25a42f382da800b8cc9c49, type: 3}

@@ -15300,6 +15300,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7827461928207282779, guid: edfe5341a27484819b79ed2672f09b02,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f75bde84a0ae040ef9a94533104509b0, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edfe5341a27484819b79ed2672f09b02, type: 3}
 --- !u!1001 &7585608017777870963
@@ -15309,6 +15314,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4762925782778023498, guid: 72b0e97ab5e5b492698995133bb0d7e7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7585608017303371142, guid: 72b0e97ab5e5b492698995133bb0d7e7,
         type: 3}
       propertyPath: m_Name

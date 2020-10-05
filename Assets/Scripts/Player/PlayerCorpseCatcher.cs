@@ -86,6 +86,6 @@ public class PlayerCorpseCatcher : MonoBehaviour
             corpseCount = 0;
         }
 
-        if(IsBuildingNest) Debug.Log(Time.time - buildingStartDate);
+        // if(IsBuildingNest) Debug.Log(Time.time - buildingStartDate);
     }
 }
