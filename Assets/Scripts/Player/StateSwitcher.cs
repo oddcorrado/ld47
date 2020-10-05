@@ -6,6 +6,9 @@ public class StateSwitcher : MonoBehaviour
 {
     private StateManager stateManager;
     [SerializeField] private LoopState forcedState;
+    [SerializeField] private bool killOnSwitch;
+
+    private float lastDate = 0;
 
     IEnumerator Start()
     {
@@ -19,8 +22,14 @@ public class StateSwitcher : MonoBehaviour
             var life = collision.gameObject.GetComponent<PlayerLife>();
 
             Debug.Log("PlayerKiller:  " + collision.gameObject + " " + life);
-            stateManager.ForceState(forcedState);
-            Destroy(gameObject);
+            if (Time.time > lastDate + 10)
+            {
+                stateManager.ForceState(forcedState);
+
+
+                lastDate = Time.time;
+                if (killOnSwitch) Destroy(gameObject);
+            }
         }
     }
 }
