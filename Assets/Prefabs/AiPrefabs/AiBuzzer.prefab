@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6444430665398413296}
   - component: {fileID: 5915674087485046026}
   - component: {fileID: 4546631031744898211}
+  - component: {fileID: 1829394395191759678}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -98,6 +99,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1829394395191759678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908685929123431188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eb25b426853b6a41a7cf6ada223027c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabCorpse: {fileID: 2491534781844773228, guid: 928cd9d0a4a0546cfa42aeab998494fc,
+    type: 3}
+  prefabFx: {fileID: 8759302286533312265, guid: 1c3db6b8038584a6f9570b0ad494ecd6,
+    type: 3}
+  me: {fileID: 5561276330190236044}
+  isAttacking: 0
 --- !u!1 &1989538143813241042
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,7 +127,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1989538143813241046}
   - component: {fileID: 5561276330190236044}
-  - component: {fileID: 7696983618425159040}
   m_Layer: 0
   m_Name: AiBuzzer
   m_TagString: Untagged
@@ -145,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 6444430665398413296}
-  life: {fileID: 7696983618425159040}
+  life: {fileID: 1829394395191759678}
   intentRenderer: {fileID: 2808445705200802657}
   body: {fileID: 2799121286991590810}
   emote: {fileID: 7322901206184967208}
@@ -159,20 +177,6 @@ MonoBehaviour:
   startY: 0
   endX: 0
   endY: 0
---- !u!114 &7696983618425159040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1989538143813241042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb25b426853b6a41a7cf6ada223027c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabCorpse: {fileID: 3022216086122756050, guid: fda34eb9a08b24e43aad4a0c182bfa2d,
-    type: 3}
 --- !u!1 &4158675840994109240
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,7 +23,7 @@ public class AiBrouterSpawner : MonoBehaviour
             }
         }
 
-        if(lastSpawnTime + delay < Time.time && existingSpawns.Count <= maxCount)
+        if(lastSpawnTime + delay < Time.time && existingSpawns.Count < maxCount)
         {
             var ai = Instantiate(AiToSpawn);
             ai.transform.SetParent(gameObject.transform);

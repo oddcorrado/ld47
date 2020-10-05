@@ -18,14 +18,24 @@ public class AiKiller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var life = collision.gameObject.GetComponent<AiBrouterLife>();
+        var brouterLife = collision.gameObject.GetComponent<AiBrouterLife>();
 
-        if (life != null)
+        if (brouterLife != null)
         {
             if (coroutine != null) StopCoroutine(coroutine);
             coroutine = StartCoroutine(AnimationTimer());
 
-            life.Die();
+            brouterLife.Die();
+        }
+
+        var buzzerLife = collision.gameObject.GetComponentInParent<AiBuzzerLife>();
+
+        if (buzzerLife != null)
+        {
+            if (coroutine != null) StopCoroutine(coroutine);
+            coroutine = StartCoroutine(AnimationTimer());
+
+            buzzerLife.Die();
         }
     }
 }

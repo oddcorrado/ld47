@@ -4,19 +4,15 @@ using UnityEngine;
 
 public class PlayerHider : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        {
-            var m = collision.gameObject.GetComponent<Mutator>();
-            if (m != null) m.isHidden = true;
-        }
+        var m = col.gameObject.GetComponent<Mutator>();
+        if (m != null) m.isHidden = true;
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    void OnTriggerExit2D(Collider2D col)
     {
-        {
-            var m = collision.gameObject.GetComponent<Mutator>();
-            if (m != null) m.isHidden = false;
-        }
+        var m = col.gameObject.GetComponent<Mutator>();
+        if (m != null) m.isHidden = false;
     }
 }

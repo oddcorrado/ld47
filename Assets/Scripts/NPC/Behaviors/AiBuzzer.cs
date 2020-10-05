@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AiFlyCombined : MonoBehaviour
+public class AiBuzzer : MonoBehaviour
 {
     [SerializeField] Controller controller;
     [SerializeField] AiBuzzerLife life;
@@ -25,53 +25,60 @@ public class AiFlyCombined : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (target == null)
+        if (body != null)
         {
-            target = FindObjectOfType<Mutator>();
-        }
-        else if (lastKnownTargetState != target.GetCurrentState())
-        {
-            ResetTargetState();
-        }
-
-        if (target != null)
-        {
-            var targetDirection = target.transform.localPosition - body.localPosition;
-
-            if (targetDirection.magnitude < seeDistance && !target.isHidden)
+            if (target == null)
             {
-                if (lastKnownTargetState == LoopState.LarvaToRoach || lastKnownTargetState == LoopState.Roach)
+                target = FindObjectOfType<Mutator>();
+            }
+            else if (lastKnownTargetState != target.GetCurrentState())
+            {
+                ResetTargetState();
+            }
+
+            if (target != null)
+            {
+                var targetDirection = target.transform.localPosition - body.localPosition;
+
+                if (targetDirection.magnitude < seeDistance && !target.isHidden)
                 {
-                    intentRenderer.sprite = scared;
-                    controller.PressedState = new Controller.Pressed()
+                    if (lastKnownTargetState == LoopState.LarvaToRoach || lastKnownTargetState == LoopState.Roach)
                     {
-                        hor = attackSpeed * -targetDirection.normalized.x,
-                        ver = attackSpeed * -targetDirection.normalized.y,
-                    };
+                        intentRenderer.sprite = scared;
+                        life.isAttacking = false;
+                        controller.PressedState = new Controller.Pressed()
+                        {
+                            hor = attackSpeed * -targetDirection.normalized.x,
+                            ver = attackSpeed * -targetDirection.normalized.y,
+                        };
+                    }
+                    else
+                    {
+                        intentRenderer.sprite = angry;
+                        life.isAttacking = true;
+                        controller.PressedState = new Controller.Pressed()
+                        {
+                            hor = attackSpeed * targetDirection.normalized.x,
+                            ver = attackSpeed * targetDirection.normalized.y,
+                        };
+                    }
                 }
                 else
                 {
-                    intentRenderer.sprite = angry;
-                    controller.PressedState = new Controller.Pressed()
-                    {
-                        hor = attackSpeed * targetDirection.normalized.x,
-                        ver = attackSpeed * targetDirection.normalized.y,
-                    };
+                    intentRenderer.sprite = neutral;
+                    life.isAttacking = false;
+                    ApplyRandomMove();
                 }
             }
             else
             {
                 intentRenderer.sprite = neutral;
+                life.isAttacking = false;
                 ApplyRandomMove();
             }
-        }
-        else
-        {
-            intentRenderer.sprite = neutral;
-            ApplyRandomMove();
-        }
 
-        emote.localPosition = new Vector3(body.localPosition.x, body.localPosition.y + 0.4f,0);
+            emote.localPosition = new Vector3(body.localPosition.x, body.localPosition.y + 0.4f, 0);
+        }
     }
 
     void ApplyRandomMove()

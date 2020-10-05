@@ -23,13 +23,13 @@ public class AiBuzzerSpawner : MonoBehaviour
             }
         }
 
-        if(lastSpawnTime + delay < Time.time && existingSpawns.Count <= maxCount)
+        if(lastSpawnTime + delay < Time.time && existingSpawns.Count < maxCount)
         {
             var ai = Instantiate(AiToSpawn);
             ai.transform.localPosition = Vector2.zero;
-            ai.GetComponent<AiFlyCombined>().body.localPosition = transform.localPosition;
+            ai.GetComponent<AiBuzzer>().body.localPosition = transform.localPosition;
 
-            var buzzer = ai.GetComponent<AiFlyCombined>();
+            var buzzer = ai.GetComponent<AiBuzzer>();
             buzzer.startX = startX;
             buzzer.startY = startY;
             buzzer.endX = endX;
