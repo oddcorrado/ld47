@@ -4,19 +4,12 @@ using UnityEngine;
 
 public class PipeEnter : MonoBehaviour
 {
+    public GameObject PipeExit;
+    public GameObject player;
 
-   
-
-    public void OnCollisionEnter2D(Collision2D collision)
+   public void MoveToExit()
     {
-        var CheckPlayer = collision.gameObject.GetComponent<PlayerMove>();
-
-        if (CheckPlayer != null)
-        {
-            CheckPlayer.MoveToExit();          
-        }
-
-        
+        player.transform.position = PipeExit.transform.position;
     }
 
 

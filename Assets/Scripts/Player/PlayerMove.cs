@@ -9,23 +9,29 @@ public class PlayerMove : MonoBehaviour
 
     public bool Larva = false;
 
-    public void MoveToExit()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(Larva == true)
-        {
-            gameObject.transform.position = PipeExit.transform.position;
-        }
-       
-    }
+        var CheckPipeEnter = collision.gameObject.GetComponent<PipeEnter>();
+        var CheckPipeExit = collision.gameObject.GetComponent<PipeExit>();
 
-    public void MoveToEnter()
-    {
-        if(Larva == true)
+        if(CheckPipeEnter != null)
         {
-            gameObject.transform.position = PipeEnter.transform.position;
+            if(Larva == true)
+            {
+                CheckPipeEnter.MoveToExit();
+            }
+            
         }
-        
-    }
 
+        if(CheckPipeExit != null)
+        {
+            if(Larva == true)
+            {
+                CheckPipeExit.MoveToEnter();
+            }
+        }
+
+
+    }
 
 }
