@@ -40,5 +40,16 @@ public class AiKiller : MonoBehaviour
             soundFxPlayer.PlaySound(SoundFxPlayer.SoundFx.AI_DIE);
             buzzerLife.Die();
         }
+
+        var swarmerLife = collision.gameObject.GetComponentInParent<AiSwarmerLife>();
+
+        if (swarmerLife != null)
+        {
+            if (coroutine != null) StopCoroutine(coroutine);
+            coroutine = StartCoroutine(AnimationTimer());
+
+            soundFxPlayer.PlaySound(SoundFxPlayer.SoundFx.AI_DIE);
+            swarmerLife.Die();
+        }
     }
 }

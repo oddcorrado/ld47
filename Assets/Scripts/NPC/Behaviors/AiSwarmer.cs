@@ -5,7 +5,7 @@ using UnityEngine;
 public class AiSwarmer : MonoBehaviour
 {
     [SerializeField] Controller controller;
-    [SerializeField] AiBuzzerLife life;
+    [SerializeField] AiSwarmerLife life;
     public Transform body;
 
     public Mutator target;

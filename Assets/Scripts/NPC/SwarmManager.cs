@@ -20,8 +20,14 @@ public class SwarmManager : MonoBehaviour
 
     float timeStart, timeSpan, verSpeed, horSpeed;
 
+    Mutator target;
+    float detectionRadius;
+
     private void Start()
     {
+        target = FindObjectOfType<Mutator>();
+        detectionRadius = 5;
+
         currentPosition = transform.localPosition;
         fliers.AddRange(GetComponentsInChildren<AiSwarmer>());
         bool nextClockwise = true;
@@ -49,6 +55,37 @@ public class SwarmManager : MonoBehaviour
 
     void FixedUpdate()
     {
+        for (int i = 0; i < fliers.Count; i++)
+        {
+            if (fliers[i] == null)
+            {
+                fliers.RemoveAt(i);
+                assignedModifiers.RemoveAt(i);
+                assignedPositions.RemoveAt(i);
+                isClockwise.RemoveAt(i);
+                i--;
+            }
+        }
+
+        var distance = new Vector2(currentPosition.x - target.transform.localPosition.x, currentPosition.y - target.transform.localPosition.y).magnitude;
+        if (distance < detectionRadius)
+        {
+            if(target.GetCurrentState()!=LoopState.Roach)
+            {
+                foreach(var f in fliers)
+                {
+                    f.isAttacking = true;
+                }
+            }
+        }
+        else
+        {
+            foreach (var f in fliers)
+            {
+                f.isAttacking = false;
+            }
+        }
+
         if (currentPosition.x < startX)
         {
             leftDirection = false;
@@ -87,6 +124,7 @@ public class SwarmManager : MonoBehaviour
             assignedPositions[i] = currentPosition + newPos;
 
             fliers[i].assignedSwarmPosition = assignedPositions[i];
+
         }
     }
 
