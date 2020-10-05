@@ -4,7 +4,25 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menus/MenuTitle.unity
+    guid: 9e191eaeab86349858d118a7800c12e9
+  - enabled: 1
+    path: Assets/Scenes/Menus/MenuLevels.unity
+    guid: 86d90d751fdcc49b4bd0990dbbfca8ce
+  - enabled: 1
+    path: Assets/Scenes/SceneTestXami.unity
+    guid: 93ea3540e883541b7bc7481b303d3e72
+  - enabled: 1
+    path: Assets/Scenes/TestSceneAi.unity
+    guid: 81b420a195fbfd7448bef7d1cd7397fc
+  - enabled: 1
+    path: Assets/Scenes/Levels/LevelTutorial.unity
+    guid: 7e733f1a9d0554635bb22fb0b00d6415
+  - enabled: 1
+    path: Assets/Scenes/TestSceneLevel.unity
+    guid: 2f38da00d6fa50b4f96ea698325405c5
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: b1a6d66e9fc614422a17e9e5b1f595ed,
       type: 2}
