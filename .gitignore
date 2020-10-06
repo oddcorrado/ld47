@@ -8,3 +8,4 @@ Builds
 Packages
 .DS_Store
 .csproj
+*.csproj
