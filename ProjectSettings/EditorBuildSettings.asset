@@ -21,8 +21,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/LevelTutorial.unity
     guid: 7e733f1a9d0554635bb22fb0b00d6415
   - enabled: 1
+    path: Assets/Scenes/Levels/LevelSwarm.unity
+    guid: 67e5b02e80602494ab0bc7985437600d
+  - enabled: 1
     path: Assets/Scenes/Levels/LevelHerby.unity
     guid: 2f38da00d6fa50b4f96ea698325405c5
+  - enabled: 1
+    path: Assets/Scenes/Levels/LevelBrouterPasCool2.unity
+    guid: 1fe08c3e586ae4d62b107d9b1d910137
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: b1a6d66e9fc614422a17e9e5b1f595ed,
       type: 2}
