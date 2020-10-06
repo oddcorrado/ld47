@@ -22,7 +22,7 @@ public class StateSwitcher : MonoBehaviour
             var life = collision.gameObject.GetComponent<PlayerLife>();
 
             Debug.Log("PlayerKiller:  " + collision.gameObject + " " + life);
-            if (Time.time > lastDate + 10)
+            if (Time.time > lastDate + 3)
             {
                 stateManager.ForceState(forcedState);
 

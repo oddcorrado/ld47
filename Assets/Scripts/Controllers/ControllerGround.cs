@@ -16,9 +16,9 @@ public class ControllerGround : Controller
         if (body == null) return;
 
         LayerMask mask = LayerMask.GetMask("wall");
-        var castLeft = Physics2D.Raycast(transform.position - new Vector3(0.5f, 0, 0), Vector2.down, 1.05f, mask);
+        var castLeft = Physics2D.Raycast(transform.position - new Vector3(0.4f, 0, 0), Vector2.down, 1.05f, mask);
         var castCenter = Physics2D.Raycast(transform.position, Vector2.down, 1.05f, mask);
-        var castRight = Physics2D.Raycast(transform.position + new Vector3(0.5f, 0, 0), Vector2.down, 1.05f, mask);
+        var castRight = Physics2D.Raycast(transform.position + new Vector3(0.4f, 0, 0), Vector2.down, 1.05f, mask);
 
         var IsGrounded = castLeft.collider != null || castCenter.collider != null || castRight.collider != null;
 

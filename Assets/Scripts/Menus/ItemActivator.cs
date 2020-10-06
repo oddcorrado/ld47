@@ -1,26 +1,29 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ItemActivator : MonoBehaviour
 {
-    [SerializeField] private Collider2D collider;
     [SerializeField] private GameObject[] toShow;
     [SerializeField] private GameObject[] toHide;
+    [SerializeField] private string activatorName = "Player";
+    [SerializeField] bool once = false;
+    [SerializeField] bool activate = true;
+
+    private bool done = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var life = collision.gameObject.GetComponent<PlayerLife>();
-        if(life != null)
+        // Debug.Log($"ACTIVATOR {name} hits {collision.gameObject.name}");
+        if (once && done) return;
+        if(collision.gameObject.name == activatorName)
             foreach (var go in toShow)
-                go.SetActive(true);
+                go.SetActive(activate);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        var life = collision.gameObject.GetComponent<PlayerLife>();
-        if (life != null)
+        done = true;
+        if (collision.gameObject.name == activatorName)
             foreach (var go in toHide)
-                go.SetActive(false);
+                go.SetActive(!activate);
     }
 }

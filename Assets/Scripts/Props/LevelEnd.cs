@@ -13,7 +13,7 @@ public class LevelEnd : MonoBehaviour
 
         if (life != null)
         {
-            if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCount - 1)
+            if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings - 1)
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             else
                 SceneManager.LoadScene("MenuLevels");
