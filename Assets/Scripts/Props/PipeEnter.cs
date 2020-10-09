@@ -12,5 +12,10 @@ public class PipeEnter : MonoBehaviour
         player.transform.position = PipeExit.transform.position;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        var m = collision.collider.GetComponent<Mutator>();
 
+        if (m!= null && m.CurrentState == LoopState.Larva) player.transform.position = PipeExit.transform.position;
+    }
 }

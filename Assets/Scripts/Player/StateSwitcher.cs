@@ -6,7 +6,9 @@ public class StateSwitcher : MonoBehaviour
 {
     private StateManager stateManager;
     [SerializeField] private LoopState forcedState;
+    [SerializeField] private LoopState requiredState = LoopState.RoachToButterfly;
     [SerializeField] private bool killOnSwitch;
+    [SerializeField] private bool anyState = true;
 
     private float lastDate = 0;
 
@@ -19,10 +21,9 @@ public class StateSwitcher : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         {
-            var life = collision.gameObject.GetComponent<PlayerLife>();
+            var m = collision.gameObject.GetComponent<Mutator>();
 
-            Debug.Log("PlayerKiller:  " + collision.gameObject + " " + life);
-            if (Time.time > lastDate + 3)
+            if (m != null && (anyState || requiredState == m.CurrentState) && Time.time > lastDate + 3)
             {
                 stateManager.ForceState(forcedState);
 

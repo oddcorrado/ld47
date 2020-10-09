@@ -17,13 +17,11 @@ public class StateManager : MonoBehaviour
     int totalStateLength = Enum.GetNames(typeof(LoopState)).Length;
 
     private MusicController musicController;
-    private PlayerMove playerMove;
 
     private void Start()
     {
         StartWheel();
         musicController = FindObjectOfType<MusicController>();
-        playerMove = FindObjectOfType<PlayerMove>();
     }
 
     public void StartWheel()
@@ -96,7 +94,6 @@ public class StateManager : MonoBehaviour
             case LoopState.Larva:
                 Debug.Log("Activating " + LoopState.Larva.ToString() + " for " + timesInSeconds[(int)LoopState.Larva] + " seconds");
                 if (musicController != null) musicController.Index = 0;
-                if (playerMove != null) playerMove.Larva = true;
                 break;
             case LoopState.LarvaToRoach:
                 Debug.Log("Activating " + LoopState.LarvaToRoach.ToString() + " for " + timesInSeconds[(int)LoopState.LarvaToRoach] + " seconds");
@@ -105,7 +102,6 @@ public class StateManager : MonoBehaviour
                 Debug.Log("Activating " + LoopState.Roach.ToString() + " for " + timesInSeconds[(int)LoopState.Roach] + " seconds");
                 
                 if (musicController != null) musicController.Index = 1;
-                if (playerMove != null) playerMove.Larva = false;
                 break;
             case LoopState.RoachToButterfly:
                 Debug.Log("Activating " + LoopState.RoachToButterfly.ToString() + " for " + timesInSeconds[(int)LoopState.RoachToButterfly] + " seconds");
@@ -113,7 +109,6 @@ public class StateManager : MonoBehaviour
             case LoopState.Butterfly:
                 Debug.Log("Activating " + LoopState.Butterfly.ToString() + " for " + timesInSeconds[(int)LoopState.Butterfly] + " seconds");
                 if (musicController != null) musicController.Index = 2;
-                if (playerMove != null) playerMove.Larva = false;
                 break;
             case LoopState.ButterflyDeath:
                 Debug.Log("Activating " + LoopState.ButterflyDeath.ToString() + " for " + timesInSeconds[(int)LoopState.Butterfly] + " seconds");
